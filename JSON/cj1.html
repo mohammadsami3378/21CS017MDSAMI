@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON EXAMPLE</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .json-container {
+            border: 1px solid #ccc;
+            color: blue;
+            padding: 10px; /* Corrected padding value */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON EXAMPLE</h1>
+
+    <div class="json-container" id="json-data"></div> <!-- Corrected id attribute -->
+
+    <script>
+        const jsonData = {
+            name: "tom",
+            age: 16,
+            email: "tom123@gmail.com",
+            address: {
+                street: "123 main street", /* Corrected street spelling */
+                city: "bagalkot", /* Corrected city spelling */
+                state: "karnataka" /* Corrected state spelling */
+            }
+        }
+
+        const jsonContainer = document.getElementById('json-data'); // Corrected getElementById method name
+
+        jsonContainer.innerHTML = `Name: ${jsonData.name}<br>Age: ${jsonData.age}<br>Email: ${jsonData.email}<br>Address: ${JSON.stringify(jsonData.address, null, 2)}`;
+    </script>
+</body>
+</html>
